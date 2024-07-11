@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const arr = ['小明','小刚','小花','小美']
+        // const [a,b,c,d] = arr 
+        // console.log('a,b,c,d',a,b,c,d)
+
+        // const [a,b,...c] = arr // ...变量，会接收后边所有的元素
+
+
+        const obj ={
+            name:'小明',
+            age:18,
+            sex:'男'
+        }
+
+        // let a,b,c;
+        // ({name:a,age:b,sex:c} = obj);
+
+        // const {name,age,sex} = obj
+        // console.log('name,age,sex',name,age,sex)
+
+
+        // 利用数组的解构来交换两个变量的位置
+        let x = 10,y = 20;
+        [y,x] = [x,y];
+        console.log('x,y',x,y)
+
+
+    </script>
+</body>
+</html>

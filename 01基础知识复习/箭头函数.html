@@ -1,0 +1,31 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       /*  const fn = (...args)=>{
+            console.log('args',args) //[{a:1,b:2,c:3}]
+            const [a,..._args] = args
+            console.log(a,_args) // {a:1,b:2,c:3}  []
+        }
+
+       fn({a:1,b:2,c:3})    */
+
+
+       const fn = (...args)=>{
+            console.log('args',args) //[1,2,3]
+            const [a,..._args] = args
+            console.log(a,_args) // 1  [2,3]
+        }
+
+       fn(1,2,3) 
+
+
+    </script>
+</body>
+</html>
