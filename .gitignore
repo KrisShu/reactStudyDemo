@@ -1,0 +1,18 @@
+# 忽略所有 .log 文件
+*.log
+ 
+# 忽略所有 .tmp 文件
+*.tmp
+ 
+# 忽略特定文件
+my_secret_file.txt
+ 
+# 忽略整个目录
+node_modules/
+ 
+# 忽略所有 .idea 文件夹
+.idea/
+.node_modules/
+ 
+# 但不忽略 doc/my_secret_file.txt
+!doc/my_secret_file.txt
