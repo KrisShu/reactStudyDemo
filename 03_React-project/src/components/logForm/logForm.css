@@ -1,0 +1,26 @@
+
+.logformbox{
+    background-color:#eae2b7 ;
+    width: 800px;
+}
+.logform{
+    width: 100%;
+
+}
+.formitem{
+    display: flex;
+    margin: 20px 0px;
+    align-items: center;
+}
+.formitem .label{
+    margin-right: 20px;
+}
+.formitem input{
+    flex: 1 0 0;
+    height: 40px;
+}
+.formitem button{
+    margin: 0 auto;
+    height: 40px;
+    width: 80px;
+}
