@@ -34,6 +34,7 @@
 .logs .item .content-box{
     flex: 1 0 0;
     text-align: center;
+    position: relative;
 }
 .logs .item .content-box .title{
     font-size: 24px;
@@ -42,4 +43,14 @@
 .logs .item .content-box .content{
     color: rgb(168, 41, 41);
     font-size: 20px;
+}
+.logs .item .content-box .del{
+    position: absolute;
+    right: 0;
+    top: 0px;
+    color: red;
+    cursor: pointer;
+}
+.logs .item .content-box .del:hover{
+    transform: scale(1.5);
 }

@@ -29,6 +29,12 @@ const LogItem = (props)=>{
         console.log("params",params)
         console.log("event",e)
     }
+
+    // 删除
+    const delHandle = (e)=>{
+        e.stopPropagation();
+        props.onhandleDel(props.index)
+    }
     return <div className='item'>
         {/* 日期 */}
         <div onClick={()=>{alert(123)}} className='date-box'>
@@ -40,6 +46,8 @@ const LogItem = (props)=>{
             {/* 事件传参 */}
             <p onClick={(e)=>{clickHandler3(e,{name:'jst'})}} className='title'>{props.title}</p>
             <p className='content'>{props.content}</p>
+
+            <span onClick={delHandle} className='del'>×</span>
         </div>
     </div>
 }

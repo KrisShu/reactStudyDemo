@@ -1,7 +1,7 @@
 import './logForm.css'
 import Card from '../UI/Card'
 import { useState } from 'react'
-const LogForm = ()=>{
+const LogForm = (props)=>{
 
     const [formData,setFormData] = useState({
         date:'',
@@ -9,20 +9,34 @@ const LogForm = ()=>{
         content:''
     })
 
-    const inputchange = (e)=>{
+    const inputchange = (e,key)=>{
+        console.log("e,key",e,key)
         setFormData({
             ...formData,
-            date:e.target.value
+            [key]:e.target.value
         })
     }
-    const formSubmit = ()=>{
+    const formSubmit = (e)=>{
+        e.preventDefault();
+        const newItem = {
+            date:formData.date,
+            title:formData.title,
+            content:formData.content
+        }
+        props.onhandleData(newItem) //子传父  把子组件的数据传给父组件
+
+        setFormData({
+            date:'',
+            title:'',
+            content:''
+        })
         console.log('formData',formData)
     }
     return  <Card className='logformbox'>
                 <form className='logform' onSubmit={formSubmit}>
                     <div className="formitem">
                         <span className="label">日期</span>
-                        <input onChange={inputchange} type="date"/>
+                        <input onChange={(e)=>{inputchange(e,'date')}} value={formData.date} type="date"/>
                     </div>
                     <div className="formitem">
                         <span className="label">标题</span>
