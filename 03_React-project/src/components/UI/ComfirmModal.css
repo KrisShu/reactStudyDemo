@@ -1,0 +1,33 @@
+.comfirmModal-box{
+    width: 300px;
+    height: 160px;
+    z-index: 2;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    background-color: #fff;
+}
+.comfirmModal-box .tip{
+    text-align: center;
+    color: red;
+    margin: 50px 0;
+}
+.comfirmModal-box .btn-box{
+    display: flex;
+    justify-content: flex-end;
+}
+.comfirmModal-box .btn-box button{
+    width: 80px;
+    margin: 0 10px;
+}
+.comfirmModal-box .btn-box button.sure{
+    background-color: red;
+    color: #fff;
+}
+.comfirmModal-box .btn-box button.cancel{
+    background-color: antiquewhite;
+    color: #232323;
+}

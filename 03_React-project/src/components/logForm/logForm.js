@@ -18,6 +18,10 @@ const LogForm = (props)=>{
     }
     const formSubmit = (e)=>{
         e.preventDefault();
+        if(!formData.date || !formData.title || !formData.content){
+            return
+        }
+       
         const newItem = {
             date:formData.date,
             title:formData.title,

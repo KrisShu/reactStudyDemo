@@ -32,11 +32,9 @@ const App = ()=>{
         setData([sondata,...data])
     }
 
-    const delEvent = (index)=>{
+    const delEvent = (id)=>{
         setData(pre=>{
-            const newData = [...pre]
-            newData.splice(index,1)
-            return newData
+          return pre.filter(item=> item.id != id)
         })
     }
     return <div>

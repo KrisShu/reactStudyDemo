@@ -8,6 +8,7 @@
 } 
 .logs .item ~ .item{
     margin-top: 16px;
+   
 }
 .logs .item .date-box{
     width: 100px;

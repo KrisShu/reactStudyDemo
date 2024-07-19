@@ -1,4 +1,7 @@
 import './logItem.css'
+
+import ComfirmModal from '../UI/ComfirmModal'
+import { useState } from 'react'
 const LogItem = (props)=>{
     /**
      * props
@@ -30,12 +33,26 @@ const LogItem = (props)=>{
         console.log("event",e)
     }
 
+
+    const [showMoadl,setshowMoadl] = useState(false)
     // 删除
     const delHandle = (e)=>{
         e.stopPropagation();
-        props.onhandleDel(props.index)
+        setshowMoadl(pre=> pre = true)
+        // 
+    }
+
+    // modal组件的取消
+    const ModalCancel = ()=>{
+        setshowMoadl(pre=> pre = false)
+    }
+    // Modal组价的确认
+    const ModalSure = ()=>{
+        props.onhandleDel(props.id)
     }
     return <div className='item'>
+       {showMoadl  && <ComfirmModal  onModalSure={ModalSure} onModalCancel={ModalCancel}/>}
+
         {/* 日期 */}
         <div onClick={()=>{alert(123)}} className='date-box'>
             <p onClick={clickHandler} className='month'>{props.date}月</p>
