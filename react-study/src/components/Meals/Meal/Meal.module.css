@@ -1,0 +1,51 @@
+.meal{
+    display: flex;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 20rem;
+}
+.meal .cover{
+    width: 200rem;
+    height: 200rem;
+}
+.meal .cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.meal .content{
+    flex: 1 0 0;
+    padding-left: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.meal .content h2{
+    font-size: 30rem;
+    margin-bottom: 10rem;
+    font-weight: normal;
+    color: black;
+}
+.meal .content .desc{
+    font-size: 26rem;
+    margin-bottom: 30rem;
+    color: #787878;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.meal .content .price_set{
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal .content .price_set .price{
+    font-size: 30rem;
+    font-weight: bold;
+
+}
+.meal .content .price_set .price::before{
+    content:"¥";
+}
