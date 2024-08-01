@@ -41,7 +41,7 @@ const App = ()=>{
         <LogForm onhandleData={handleData}/>
          
         <Card className='logs'>
-            
+          
             <Logs  onhandleDel={delEvent} data={data}/>
         
         </Card>

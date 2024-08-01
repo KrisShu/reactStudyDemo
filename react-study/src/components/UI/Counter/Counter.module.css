@@ -1,0 +1,24 @@
+.counter{
+    display: flex;
+    align-items: center;
+}
+
+.counter button{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    line-height: 31rem;
+    border: none;
+    font-size: 30rem;
+    font-weight: bold;
+
+}
+.counter button.addtn{
+    background-color: rgb(255, 229, 32);
+
+}
+.counter .num{
+    font-size: 24rem;
+    display: block;
+    margin: 0 16rem;
+}

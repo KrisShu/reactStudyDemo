@@ -1,19 +1,11 @@
 import Meal from "./Meal/Meal"
 import classes from './Meals.module.css'
-const Meals = ()=>{
+const Meals = (props)=>{
+    const mealele = props.mealsData.map(item=> <Meal key={item.id} meal={item}></Meal>)
+
     return (
         <div className={classes.meals}>
-            <Meal></Meal>
-            <Meal></Meal>
-            <Meal></Meal>
-            <Meal></Meal>
-            <Meal></Meal>
-            <Meal></Meal>
-            <Meal></Meal>
-            <Meal></Meal>
-            <Meal></Meal>
-            <Meal></Meal>
-            <Meal></Meal>
+           {mealele}
         </div>
     )
 }

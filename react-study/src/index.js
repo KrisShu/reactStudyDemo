@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-document.documentElement.style.fontSize = 100 /750 +'vw'
+document.documentElement.style.fontSize = 100 /750 +'vw' //适配移动端
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

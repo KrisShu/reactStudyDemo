@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Meals from "./components/Meals/Meals";
-import CartContext from './store/CartContext'
-import Filter from "./components/Filter/Filter";
+import A from "./components/testContext/A";
+import B from "./components/testContext/B";
+import TestContext from "./store/TestContext";
+
 const Meals_Data = [
     {
         id:1,
@@ -104,7 +106,7 @@ function App() {
 
          meal.num -= 1; //商品数量减一
         if(meal.num === 0){ //如果商品的num为0时  就要从购物车中移除该商品
-            newCart.items.splice(newCart.items.indexOf(meal),1)
+            newCart.items.splice(newCart.indexOf(meal),1)
         }
 
         newCart.totalAmount -= 1 //购物车总数-1
@@ -113,20 +115,16 @@ function App() {
 
     }
 
-    // 过滤
-    const filterEvent = (keyword)=>{
-       const data =   Meals_Data.filter(item=> item.title.indexOf(keyword) !== -1)
-        setMealsData([...data])
-    }
 
     return (
-        <CartContext.Provider value={{...carData,addCart,reduceCart}}>
-            <div>
-                <Filter onFilter={filterEvent}></Filter>
-                <Meals mealsData={mealsData}></Meals>
-            </div>
-        </CartContext.Provider>
-       
+       <div>
+        <A></A>
+        <TestContext.Provider value={{name:'小刚',age:19}}>
+            <B></B>
+        </TestContext.Provider>
+        
+        <p>我是pageB页面</p>
+       </div>
     );
 }
 

@@ -47,5 +47,5 @@
 
 }
 .meal .content .price_set .price::before{
-    content:"¥";
+    content:"❤";
 }

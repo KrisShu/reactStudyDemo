@@ -1,16 +1,17 @@
 import classes from './Meal.module.css'
-const Meal = ()=>{
+import Counter from '../../UI/Counter/Counter.js'
+const Meal = (props)=>{
     return(
         <div className={classes.meal}>
             <div className={classes.cover}>
-                <img src="/imgs/1.jpg"></img>
+                <img src={props.meal.img}></img>
             </div>
             <div className={classes.content}>
-                <h2>公主</h2>
-                <p className={classes.desc}>美丽的公主美丽的公主美丽的公主美丽的公主美丽的公主美丽的公主美丽的公主美丽的公主美丽的公主美丽的公主美丽的公主美丽的公主美丽的公主美丽的公主</p>
+                <h2>{props.meal.title}</h2>
+                <p className={classes.desc}>{props.meal.desc}</p>
                 <div className={classes.price_set}>
-                    <span className={classes.price}>12</span>
-                    <div>数量</div>
+                    <span className={classes.price}>{props.meal.star}</span>
+                    <Counter meal={props.meal}></Counter>
                 </div>
             </div>
         </div>

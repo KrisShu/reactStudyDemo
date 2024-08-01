@@ -73,4 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 1. 创建项目  npx create-react-app 项目名称
 （在创建时 npx太慢了 可以为国内镜像  npm config set registry https://registry.npmmirror.com/）
 
-2.
+2.删除不需要的文件
+
+3.学习了 module.css、 行内样式、fragment、context
