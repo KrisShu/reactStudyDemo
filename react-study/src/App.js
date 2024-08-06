@@ -2,6 +2,9 @@ import { useState } from "react";
 import Meals from "./components/Meals/Meals";
 import CartContext from './store/CartContext'
 import Filter from "./components/Filter/Filter";
+import Cart from "./components/Cart/Cart";
+import CartDetail from "./components/Cart/CartDetail";
+
 const Meals_Data = [
     {
         id:1,
@@ -124,6 +127,7 @@ function App() {
             <div>
                 <Filter onFilter={filterEvent}></Filter>
                 <Meals mealsData={mealsData}></Meals>
+                <Cart></Cart>
             </div>
         </CartContext.Provider>
        

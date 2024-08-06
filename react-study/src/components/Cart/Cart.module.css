@@ -1,0 +1,64 @@
+.cart{
+    position: fixed;
+    width: 90%;
+    height: 80rem;
+    background-color: #333;
+    border-radius: 50rem;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10rem;
+    display: flex;
+    z-index: 9999;
+    justify-content: space-between;
+}
+.leftBox{
+    position: relative;
+    padding-left: 120rem;
+}
+.bag{
+    position: absolute;
+    bottom: 0rem;
+    width: 84rem;
+    height: 84rem;
+    left: 0;
+}
+.bag img{
+    width: 100%;
+    height: 100%;
+}
+.totalAmount{
+    position: absolute;
+    right: -10rem;
+    width: 34rem;
+    height: 34rem;
+    line-height: 34rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #f00;
+
+}
+.totalPrice,.noTip{
+    font-size: 28rem;
+    color: #fff;
+    line-height: 80rem;
+}
+.noTip{
+    color: #aaa;
+}
+.totalPrice::before{
+    content: "¥";
+}
+
+.settleBtn{
+    height: 80rem;
+    width: 200rem;
+    border-radius: 50rem;
+    background-color: #fcbf49;
+    border: none;
+    font-size: 32rem;
+}
+.settleBtn.disable{
+    background-color: #777;
+    color: #ccc;
+}

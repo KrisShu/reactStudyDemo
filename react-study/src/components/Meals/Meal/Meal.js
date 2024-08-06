@@ -8,7 +8,8 @@ const Meal = (props)=>{
             </div>
             <div className={classes.content}>
                 <h2>{props.meal.title}</h2>
-                <p className={classes.desc}>{props.meal.desc}</p>
+                {props.noDesc ? null : <p className={classes.desc}>{props.meal.desc}</p>}
+                
                 <div className={classes.price_set}>
                     <span className={classes.price}>{props.meal.star}</span>
                     <Counter meal={props.meal}></Counter>

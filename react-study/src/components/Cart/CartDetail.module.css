@@ -1,0 +1,33 @@
+.cartDetail{
+    background-color: #fff;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0 20rem;
+    padding-bottom:120rem;
+    border-top-left-radius: 30rem;
+    border-top-right-radius: 30rem;
+    padding-top: 20rem;
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.capBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.capBox .title{
+    font-size: 30rem;
+    font-weight: bold;
+}
+.capBox  .delBox{
+    display: flex;
+    align-items: center;
+}
+
+.mealList{
+    flex: 1;
+    overflow-y: auto;
+}

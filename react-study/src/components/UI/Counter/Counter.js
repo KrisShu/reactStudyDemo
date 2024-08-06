@@ -7,12 +7,14 @@ const Counter = (props)=>{
     const CartCtx = useContext(CartContext)
 
     // 加的操作事件
-    const addEvent = ()=>{
+    const addEvent = (e)=>{
+        // e.stopPropagation();
         CartCtx.addCart(props.meal)
     }
 
     // 
-    const reduceEvent = ()=>{
+    const reduceEvent = (e)=>{
+        // e.stopPropagation();
         CartCtx.reduceCart(props.meal)
     }
 
