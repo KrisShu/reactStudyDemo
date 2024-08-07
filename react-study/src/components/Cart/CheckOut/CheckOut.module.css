@@ -1,0 +1,78 @@
+.checkOut{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(238, 238, 238);
+    z-index: 9999;
+    box-sizing: border-box;
+    padding: 0 10rem;
+}
+.closeIcon{
+    width: 60rem;
+    height: 60rem;
+}
+.closeIcon img{
+    width: 100%;
+    height: 100%;
+}
+.section{
+    border-radius: 10rem;
+    background-color: #fff;
+}
+
+.section .cap{
+    width: 100%;
+    height: 100rem;
+    font-size: 30rem;
+    line-height: 100rem;
+    padding-left: 20rem;
+    border-bottom: 1rem solid #f2f2f2;
+    font-weight: bold;
+  
+}
+.listBox{
+   
+    border-bottom-left-radius: 30rem;
+    border-bottom-right-radius: 30rem;
+}
+.footer{
+    border-top-left-radius: 30rem;
+    border-top-right-radius: 30rem;
+    height:150rem ;
+    border-top: 1px #f2f2f2 dashed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20rem;
+    justify-content: center;
+}
+.footer::after,
+.footer::before{
+    position: absolute;
+    content: '';
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: rgb(238, 238, 238);
+    top: 0;
+    top: -15rem;
+    left: -10rem;
+}
+.footer::after{
+    left: auto;
+    right: -10rem;
+}
+.money{
+    font-size: 30rem;
+    font-weight: bold;
+    margin-left: 20rem;
+
+}
+.money::before{
+    content: "¥";
+    font-size: 24rem;
+    font-weight: normal;
+}

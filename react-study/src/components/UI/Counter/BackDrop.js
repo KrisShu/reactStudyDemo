@@ -17,7 +17,9 @@ import ReactDOM from 'react-dom'
 
 const popBgEle =  document.getElementById('popBg-ele')
 const BackDrop = (props)=>{
-    return  ReactDOM.createPortal(<div className={`${classes.PopBg} ${props.className}`}>
+    return  ReactDOM.createPortal(<div 
+    {...props}
+    className={`${classes.PopBg} ${props.className}`}>
         {props.children}
     </div>,popBgEle) 
 }

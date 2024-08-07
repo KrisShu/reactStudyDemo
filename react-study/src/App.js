@@ -3,8 +3,6 @@ import Meals from "./components/Meals/Meals";
 import CartContext from './store/CartContext'
 import Filter from "./components/Filter/Filter";
 import Cart from "./components/Cart/Cart";
-import CartDetail from "./components/Cart/CartDetail";
-
 const Meals_Data = [
     {
         id:1,
@@ -116,6 +114,17 @@ function App() {
 
     }
 
+    // 清空购物车
+    const clearCart = ()=>{
+
+        const newCart = {...carData}
+        newCart.items.forEach(item => delete item.num ) //要去删除每个meal的num值，避免清空购物车后每个商品列表还存在num
+        newCart.items = [];
+        newCart.totalAmount = 0
+        newCart.totalPrice = 0
+        setCarData(newCart)
+    }
+
     // 过滤
     const filterEvent = (keyword)=>{
        const data =   Meals_Data.filter(item=> item.title.indexOf(keyword) !== -1)
@@ -123,11 +132,12 @@ function App() {
     }
 
     return (
-        <CartContext.Provider value={{...carData,addCart,reduceCart}}>
+        <CartContext.Provider value={{...carData,addCart,reduceCart,clearCart}}>
             <div>
                 <Filter onFilter={filterEvent}></Filter>
                 <Meals mealsData={mealsData}></Meals>
                 <Cart></Cart>
+
             </div>
         </CartContext.Provider>
        

@@ -3,6 +3,7 @@ import bagImg from '../../assets/images/bag.png'
 import CartContext from '../../store/CartContext'
 import { useContext, useState } from 'react'
 import CartDetail from './CartDetail'
+import CheckOut from './CheckOut/CheckOut'
 
 const Cart = ()=>{
     const CartText = useContext(CartContext)
@@ -14,9 +15,19 @@ const Cart = ()=>{
         if(CartText.totalAmount == 0) return
         setShowDetail(newShowDetail)
     }
+
+    const [showCheckOut,setShowCheckOut] = useState(false)
+    const checkOutHandle = ()=>{
+        if(CartText.totalAmount == 0) return
+        setShowCheckOut(true)
+    }
+
+    const checkOutClose = ()=>{
+        setShowCheckOut(false)
+    }
     return(
         <div onClick={showDetailHandler} className={classes.cart}>
-
+            { showCheckOut && <CheckOut onclose={checkOutClose}></CheckOut> }
             {(showDetail && CartText.totalAmount !== 0) && <CartDetail></CartDetail>}
             <div className={classes.leftBox}>
                 <div className={classes.bag}>
@@ -25,7 +36,7 @@ const Cart = ()=>{
                 </div>
                 {CartText.totalAmount === 0 ? <p className={classes.noTip}>未选购商品</p> : <span className={classes.totalPrice}>{CartText.totalPrice}</span>} 
             </div>
-            <button className={`${classes.settleBtn} ${CartText.totalAmount === 0 ? classes.disable :''}`}>去结算</button>
+            <button onClick={checkOutHandle} className={`${classes.settleBtn} ${CartText.totalAmount === 0 ? classes.disable :''}`}>去结算</button>
         </div>
     )
 }
