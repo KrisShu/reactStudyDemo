@@ -1,0 +1,42 @@
+.checkOutItem{
+    display: flex;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 20rem;
+}
+.checkOutItem .cover{
+    width: 200rem;
+    height: 200rem;
+}
+.checkOutItem .cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.checkOutItem .content{
+    flex: 1 0 0;
+    padding-left: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.checkOutItem .content h2{
+    font-size: 30rem;
+    margin-bottom: 10rem;
+    font-weight: normal;
+    color: black;
+}
+
+.checkOutItem .content .price_set{
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkOutItem .content .price_set .price{
+    font-size: 30rem;
+    font-weight: bold;
+
+}
+.checkOutItem .content .price_set .price::before{
+    content:"❤";
+}

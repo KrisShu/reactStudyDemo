@@ -1,7 +1,7 @@
 import classes from './Cart.module.css'
 import bagImg from '../../assets/images/bag.png'
 import CartContext from '../../store/CartContext'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import CartDetail from './CartDetail'
 import CheckOut from './CheckOut/CheckOut'
 
@@ -31,10 +31,17 @@ const Cart = ()=>{
     const checkOutClose = ()=>{
         setShowCheckOut(false)
     }
+
+    useEffect(()=>{
+        if(CartText.totalAmount == 0){
+            setShowCheckOut(false)
+            setShowDetail(false)
+        }
+    })
     return(
         <div onClick={showDetailHandler} className={classes.cart}>
             { showCheckOut && <CheckOut onclose={checkOutClose}></CheckOut> }
-            {(showDetail && CartText.totalAmount !== 0) && <CartDetail></CartDetail>}
+            {showDetail && <CartDetail></CartDetail>}
             <div className={classes.leftBox}>
                 <div className={classes.bag}>
                     <img src={bagImg}></img>

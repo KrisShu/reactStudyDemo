@@ -33,7 +33,8 @@
   
 }
 .listBox{
-   
+    max-height: 900rem;
+    overflow: auto;
     border-bottom-left-radius: 30rem;
     border-bottom-right-radius: 30rem;
 }
