@@ -9,6 +9,12 @@ const Cart = ()=>{
     const CartText = useContext(CartContext)
 
     const [showDetail,setShowDetail] = useState(false)
+
+    // if(CartText.totalAmount == 0){
+    //     setShowDetail(false)
+    // }
+
+
     // 
     const showDetailHandler = ()=>{
         const newShowDetail = !showDetail
